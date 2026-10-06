@@ -1,0 +1,20 @@
+import random
+
+anime = "abcdefghijklmnopqrstuvwxyz"
+n = int(input("введіть N:"))
+strings = []
+
+for i in range(n):
+    s = ''
+    for j in range(n):
+        s = s + random.choice(anime)
+    strings.append(s)
+    print(s)
+
+best = strings[0]
+for s in strings:
+    if s.count('o') > best.count('o'):
+        best = s
+
+print("рядок, у якому найчастіше зустрічається літера 'o'", best)
+print("кількість літер 'o' ", best.count('o'))

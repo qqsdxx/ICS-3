@@ -1,0 +1,15 @@
+import numpy as np 
+import random
+
+n = int(input("введіть число n: "))
+masiv = np.zeros(n, dtype=int)
+
+for i in range(n):
+    masiv[i] = 3 ** i
+
+print("масив з степенями числа 3: ")
+print(masiv)
+
+random.shuffle(masiv)
+print("масив після перемішування:")
+print(masiv)

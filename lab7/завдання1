@@ -1,0 +1,14 @@
+n = int(input("введіть кількість рядків N: "))
+strings = []
+for i in range(n):
+    s = input("введіть рядок: ")
+    strings.append(s)
+
+max_len = 0
+for s in strings:
+    if len(s) > max_len:
+        max_len = len(s)
+
+for i in range(n):
+    strings[i] = strings [i] + '*' * (max_len - len(strings[i]))
+    print(strings[i])
